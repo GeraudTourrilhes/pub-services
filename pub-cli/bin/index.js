@@ -5,7 +5,6 @@ program.version('1.0.0')
 .option('-o, --opened','Get the pubs list Open')
 .parse(process.argv);
 
-//program.version('1.0.0').option('-o, --opened','Get the pubs list Open').parse(process.argv);
 if(program.list) {
     require('../src/main').getListPub();
 }
