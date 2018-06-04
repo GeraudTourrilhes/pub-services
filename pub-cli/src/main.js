@@ -1,12 +1,12 @@
-var pubService = require("pub-services");
+var pubService = require("pub-services").services.pubService;
 
 function getListPub(){
-    console.log(pubService.getList());
+    console.log(pubService.listerPubs());
 }
 
 
 function getListPubOpen(){
-    console.log(pubService.getListOpen());
+    console.log(pubService.listerPubsOuverte());
 }
 
 

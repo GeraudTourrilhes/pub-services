@@ -1,9 +1,9 @@
 const express = require('express');
-const pubService = require('pub-services');
+const pubService = require('pub-services').services.pubService;
 const app = express();
 
 app.get('/pubs', function (req, res) {
-    const pubs = pubService.getList();
+    const pubs = pubService.listerPubs();
     
     res.status(200);
     res.end(JSON.stringify(pubs));
@@ -11,7 +11,7 @@ app.get('/pubs', function (req, res) {
 })
 
 app.get('/pubs/opened', function (req, res) {
-    const pubs = pubService.getListOpen();
+    const pubs = pubService.listerPubsOuverte();
     
     res.status(200);
     res.end(JSON.stringify(pubs));

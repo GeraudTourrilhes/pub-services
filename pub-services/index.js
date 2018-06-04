@@ -11,8 +11,9 @@ function getListPubsOpen()
 }
 
 module.exports = {
-    getList: getListPubs,
-    getListOpen: getListPubsOpen,
+    services:{
+        pubService: pubService
+    }
   };
   
 
